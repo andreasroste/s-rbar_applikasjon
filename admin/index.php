@@ -43,6 +43,7 @@ if(isset($_POST['brukernavn']) && isset($_POST['passord'])){
             <input type="submit" value="Logg inn" />
             <?php if(isset($error)) echo $error; ?>
         </form>
+        Copyright &copy; 2022 - <a href="https://github.com/andreasroste">Andreas Røste</a>
     </div>
 </body>
 </html>
