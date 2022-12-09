@@ -8,8 +8,8 @@ if(isset($_SESSION['loggedin'])) header('Location: /admin/dash.php');
 if(isset($_POST['brukernavn']) && isset($_POST['passord'])){
     $brukernavn = $_POST['brukernavn'];
     $passord = $_POST['passord'];
-    $db = mysqli_connect('localhost','root','root','hastalavista');
-    $result = mysqli_query($db, "SELECT id FROM users WHERE username = '$brukernavn' AND password = '$passord'");
+    $db = mysqli_connect('localhost','hello','hello','HastaLaVista');
+    $result = mysqli_query($db, "SELECT id FROM users WHERE brukernavn = '$brukernavn' AND passord = '$passord'");
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     $count = mysqli_num_rows($result);
     if($count >= 1) {
