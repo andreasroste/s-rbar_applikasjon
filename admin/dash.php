@@ -6,7 +6,7 @@ if(!isset($_SESSION['loggedin']))
 if(isset($_POST['fil'])){
     $target_dir = "filer/";
     $target_file = $target_dir . basename($_FILES["fil"]["name"]);
-    move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+    move_uploaded_file($_FILES["fil"]["tmp_name"], $target_file);
 }
 
 $filer = scandir('filer', SCANDIR_SORT_DESCENDING);
@@ -26,7 +26,7 @@ $filer = scandir('filer', SCANDIR_SORT_DESCENDING);
     <div class="container">
         <h1>HastaLaVista ruteplanlegging</h1>
         <h2>Last opp flyveoversikter</h2>
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             <input type="file" name="fil" accept=".csv" placeholder="Passord" /><br>
             <input type="submit" value="Last opp" />
             <?php if(isset($error)) echo $error; ?>
