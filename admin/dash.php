@@ -46,6 +46,7 @@ $filer = scandir('filer', SCANDIR_SORT_DESCENDING);
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <a href="loggut.php">Logg ut</a>
     </div>
 </body>
 </html>
