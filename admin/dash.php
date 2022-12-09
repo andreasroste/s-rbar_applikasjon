@@ -3,7 +3,7 @@ session_start();
 if(!isset($_SESSION['loggedin']))
     header('Location: /admin');
 
-if(isset($_POST['fil'])){
+if(isset($_FILES['fil'])){
     $target_dir = "filer/";
     $target_file = $target_dir . basename($_FILES["fil"]["name"]);
     move_uploaded_file($_FILES["fil"]["tmp_name"], $target_file);
