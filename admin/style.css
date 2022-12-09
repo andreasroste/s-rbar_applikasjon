@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@100;400&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html,body {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #ccc;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+input[type=text],input[type=password] {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.4);
+    margin: 5px;
+    width: 100%;
+}
+
+input[type=submit]{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.4);
+    width: 100%;
+    margin: 5px;
+    margin-top: 40px;
+    background: #da4453;
+}
+
+.container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
