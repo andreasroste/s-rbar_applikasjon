@@ -2,7 +2,7 @@
 
 session_start();
 
-if(isset($_SESSION['loggedin'])) header('Location: /admin/dash.php');
+if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']) header('Location: /admin/dash.php');
 
 
 if(isset($_POST['brukernavn']) && isset($_POST['passord'])){
