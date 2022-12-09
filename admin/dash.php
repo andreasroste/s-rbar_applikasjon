@@ -10,8 +10,6 @@ if(isset($_POST['fil'])){
 }
 
 $filer = scandir('filer', SCANDIR_SORT_DESCENDING);
-$filer = array_pop($filer); // Fjerner "."
-$filer = array_pop($filer); // Fjerner ".."
 
 ?>
 
