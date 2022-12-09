@@ -7,6 +7,7 @@ if(isset($_POST['fil'])){
     $target_dir = "filer/";
     $target_file = $target_dir . basename($_FILES["fil"]["name"]);
     move_uploaded_file($_FILES["fil"]["tmp_name"], $target_file);
+    echo 'Lastet opp: ' . $target_file;
 }
 
 $filer = scandir('filer', SCANDIR_SORT_DESCENDING);
